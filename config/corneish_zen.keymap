@@ -28,5 +28,14 @@
                          &kp LCTRL  &kp LEFT_COMMAND  &kp LEFT_ALT    &kp SPACE  &kp RIGHT_COMMAND  &kp LCTRL
             >;
         };
+
+        layer_1 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
     };
 };
