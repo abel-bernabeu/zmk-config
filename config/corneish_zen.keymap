@@ -17,6 +17,14 @@
 / {
     chosen { zmk,physical-layout = &foostan_corne_5col_layout; };
 
+    behaviors {
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-toggle-layer";
+            label = "NEW_BEHAVIOR";
+            #binding-cells = <1>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -36,6 +44,20 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans    &trans  &trans  &trans
             >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        switch {
+            if-layers = <0>;
+            then-layer = <1>;
+        };
+
+        back {
+            if-layers = <1>;
+            then-layer = <0>;
         };
     };
 };
